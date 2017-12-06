@@ -37,8 +37,8 @@ ENV	HADOOP_LOG_DIR=${hadoop_log_dir} \
 
 ## DOWNLOAD HADOOP BINARY and EXTRACT
 RUN /bin/sh -c "/docker-hadoop/setup/extract_hadoop.sh" && \
-	/bin/sh -c "/docker-hadoop/setup/update_hadoop_env.sh" && \
-	/bin/sh -c "/docker-hadoop/setup/setup_hadoop.sh"
+	/bin/sh -c "/docker-hadoop/setup/setup_hadoop.sh" && \
+	/bin/sh -c "/docker-hadoop/setup/update_hadoop_env.sh"
 
 #USER CONFIG DATA PLACEHOLDER
 ENV HADOOP_CONF_DATA_PREDEF="" \
